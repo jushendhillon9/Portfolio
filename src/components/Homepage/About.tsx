@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { ExternalLink, Download, Linkedin } from 'lucide-react'
 import { ImageWithFallback } from '../figma/ImageWithFallback'
-import professionalPhoto from '../../../public/assets/ProfessionalPhoto.jpg'
+import professionalPhoto from '/src/assets/ProfessionalPhoto.jpg'
 
 const About = () => {
   return (

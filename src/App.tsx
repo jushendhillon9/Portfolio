@@ -5,6 +5,7 @@ import Projects from './components/Homepage/Projects'
 import Skills from './components/Homepage/Skills'
 import Contact from './components/Homepage/Contact'
 import { Toaster } from './components/ui/sonner'
+import "./styles/globals.css";
 
 export default function App() {
   return (

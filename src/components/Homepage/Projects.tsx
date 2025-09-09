@@ -3,8 +3,8 @@ import { ExternalLink, Github } from 'lucide-react'
 import { Card, CardContent } from '../ui/card'
 import { Badge } from '../ui/badge'
 import { ImageWithFallback } from '../figma/ImageWithFallback'
-import FhirConverterIMG from "../../../public/assets/FhirConverter.png"
-import MyTraject from "../../../public/assets/MyTraject.png"
+import FhirConverterIMG from "/src/assets/FhirConverter.png"
+import MyTraject from "/src/assets/MyTraject.png"
 
 const Projects = () => {
   const projects = [
