@@ -1,36 +1,35 @@
-import Navigation from './components/Homepage/Navigation'
-import Hero from './components/Homepage/Hero'
-import About from './components/Homepage/About'
-import Projects from './components/Homepage/Projects'
-import Skills from './components/Homepage/Skills'
-import Contact from './components/Homepage/Contact'
-import { Toaster } from './components/ui/sonner'
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
-export default function App() {
+function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Navigation />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
-      </main>
-      
-      {/* Footer */}
-      <footer className="py-8 px-6 border-t border-border bg-muted/10">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-muted-foreground">
-            © 2025 Jushen Dhillon. Built with React, TypeScript, and Tailwind CSS.
-          </p>
-          <p className="text-sm text-muted-foreground mt-2">
-            Designed and developed with ❤️ for showcasing my coding journey.
-          </p>
-        </div>
-      </footer>
-      
-      <Toaster />
-    </div>
+    <>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
   )
 }
+
+export default App
