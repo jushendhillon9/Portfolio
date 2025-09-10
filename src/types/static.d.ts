@@ -12,3 +12,5 @@ declare module "*.svg" {
   >;
   export default ReactComponent;
 }
+
+declare module "*.pdf";

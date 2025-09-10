@@ -2,6 +2,7 @@ import { motion } from 'motion/react'
 import { ExternalLink, Download, Linkedin } from 'lucide-react'
 import { ImageWithFallback } from '../figma/ImageWithFallback.tsx'
 import professionalPhoto from '/src/assets/ProfessionalPhoto.jpg'
+import resume from '/src/assets/Resume-JushenDhillon.pdf'
 
 const About = () => {
   return (
@@ -56,8 +57,8 @@ const About = () => {
                 <ExternalLink size={16} />
               </motion.a>
               <motion.a
-                href="#"
-                download="JushenDhillon_CV.pdf"
+                href= {resume}
+                download="JushenDhillon_Resume.pdf"
                 className="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
