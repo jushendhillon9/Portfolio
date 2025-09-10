@@ -1,10 +1,10 @@
-import Navigation from './components/Homepage/Navigation'
-import Hero from './components/Homepage/Hero'
-import About from './components/Homepage/About'
-import Projects from './components/Homepage/Projects'
-import Skills from './components/Homepage/Skills'
-import Contact from './components/Homepage/Contact'
-import { Toaster } from './components/ui/sonner'
+import Navigation from './components/Homepage/Navigation.tsx'
+import Hero from './components/Homepage/Hero.tsx'
+import About from './components/Homepage/About.tsx'
+import Projects from './components/Homepage/Projects.tsx'
+import Skills from './components/Homepage/Skills.tsx'
+import Contact from './components/Homepage/Contact.tsx'
+import { Toaster } from './components/ui/sonner.tsx'
 import "./styles/globals.css";
 
 export default function App() {

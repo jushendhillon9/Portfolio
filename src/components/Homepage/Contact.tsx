@@ -1,10 +1,10 @@
 import { motion } from 'motion/react'
 import { useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
-import { Input } from '../ui/input'
-import { Textarea } from '../ui/textarea'
-import { Button } from '../ui/button'
-import { Label } from '../ui/label'
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card.tsx'
+import { Input } from '../ui/input.tsx'
+import { Textarea } from '../ui/textarea.tsx'
+import { Button } from '../ui/button.tsx'
+import { Label } from '../ui/label.tsx'
 import { ExternalLink, Mail, Phone, Send } from 'lucide-react'
 import { toast } from "sonner";
 

@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
-import { Badge } from '../ui/badge'
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
+import { Badge } from '../ui/badge.tsx'
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card.tsx'
 
 const Skills = () => {
   const skillCategories = [

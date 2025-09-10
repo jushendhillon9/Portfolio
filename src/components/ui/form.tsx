@@ -11,8 +11,8 @@ import type {
   UseControllerProps,
 } from "react-hook-form";
 
-import { Label } from "../ui/label";
-import { cn } from "../ui/utils";
+import { Label } from "../ui/label.tsx";
+import { cn } from "./utils.tsx";
 
 const Form = FormProvider;
 

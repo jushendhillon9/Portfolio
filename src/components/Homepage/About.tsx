@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 import { ExternalLink, Download, Linkedin } from 'lucide-react'
-import { ImageWithFallback } from '../figma/ImageWithFallback'
+import { ImageWithFallback } from '../figma/ImageWithFallback.tsx'
 import professionalPhoto from '/src/assets/ProfessionalPhoto.jpg'
 
 const About = () => {
