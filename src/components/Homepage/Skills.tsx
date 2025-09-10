@@ -1,21 +1,21 @@
 import { motion } from 'motion/react'
-import { Badge } from '../ui/badge'
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
+import { Badge } from '../ui/badge.tsx'
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card.tsx'
 
 const Skills = () => {
   const skillCategories = [
     {
       title: "Front-End",
       skills: [
-        "HTML", "CSS", "SASS", "JavaScript", "React", 
-        "jQuery", "Chart.js", "Handlebars.js", "Bootstrap"
+        "HTML", "CSS", "SASS", "JavaScript", "React", "Next.js",
+        "jQuery", "Chart.js", "Handlebars.js", "Bootstrap", "Tailwind & ShadCN"
       ],
       color: "bg-blue-50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-800"
     },
     {
       title: "Back-End",
       skills: [
-        "Node.js", "Spring Boot", "Express.js", "MySQL", 
+        "Node.js", "Supabase", "Spring Boot", "Express.js", "MySQL", 
         "Sequelize", "MongoDB", "Mongoose", "RESTful APIs"
       ],
       color: "bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800"
@@ -23,8 +23,8 @@ const Skills = () => {
     {
       title: "Tools & Other",
       skills: [
-        "MVC", "Git", "GitHub", "Heroku", "Webpack", 
-        "Jest", "VS Code", "FHIR", "Java", "GraphQL", "JWT"
+        "AWS Fargate & Lambda", "MVC", "Git", "GitHub", "Heroku", "Vercel", "Webpack", 
+        "Jest", "C++", "FHIR", "Java", "Python", "GraphQL", "JWT"
       ],
       color: "bg-purple-50 dark:bg-purple-950/20 border-purple-200 dark:border-purple-800"
     }
