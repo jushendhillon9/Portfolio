@@ -1,10 +1,10 @@
 import { motion } from 'motion/react'
 import { useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
-import { Input } from '../ui/input'
-import { Textarea } from '../ui/textarea'
-import { Button } from '../ui/button'
-import { Label } from '../ui/label'
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card.tsx'
+import { Input } from '../ui/input.tsx'
+import { Textarea } from '../ui/textarea.tsx'
+import { Button } from '../ui/button.tsx'
+import { Label } from '../ui/label.tsx'
 import { ExternalLink, Mail, Phone, Send } from 'lucide-react'
 import { toast } from "sonner";
 
@@ -12,8 +12,11 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    // honeypot field (bots will fill this, humans won't)
+    company: ''
   })
+  const [submitting, setSubmitting] = useState(false)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -23,24 +26,39 @@ const Contact = () => {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
-    // Basic validation
+
     if (!formData.name || !formData.email || !formData.message) {
       toast.error('Please fill in all fields')
       return
     }
 
-    // Simulate form submission
-    toast.success('Thanks for reaching out! I\'ll get back to you soon.')
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    })
+    try {
+      setSubmitting(true)
+
+      const resp = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        // Map to backend keys: fullname, sender, message (+ honeypot)
+        body: JSON.stringify({
+          fullname: formData.name,
+          sender: formData.email,
+          message: formData.message,
+          honeypot: formData.company,
+        })
+      })
+
+      const data = await resp.json().catch(() => ({}))
+      if (!resp.ok) throw new Error(data?.error || 'Failed to send')
+
+      toast.success("Thanks for reaching out! I'll get back to you soon.")
+      setFormData({ name: '', email: '', message: '', company: '' })
+    } catch (err: any) {
+      toast.error(err?.message || 'Something went wrong')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -87,10 +105,7 @@ const Contact = () => {
                   Follow my coding journey, tutorials, and insights on dev.to. 
                   I share my experiences learning new technologies and building projects.
                 </p>
-                <Button 
-                  asChild
-                  className="w-full"
-                >
+                <Button asChild className="w-full">
                   <a 
                     href="https://dev.to/jushendhillon9" 
                     target="_blank" 
@@ -118,6 +133,18 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Honeypot (hidden) */}
+                  <input
+                    type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    className="hidden"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                  />
+
                   <div className="space-y-2">
                     <Label htmlFor="name">Full Name</Label>
                     <Input
@@ -161,9 +188,10 @@ const Contact = () => {
                     type="submit" 
                     className="w-full"
                     size="lg"
+                    disabled={submitting}
                   >
                     <Send size={20} className="mr-2" />
-                    Send Message
+                    {submitting ? 'Sending…' : 'Send Message'}
                   </Button>
                 </form>
 
