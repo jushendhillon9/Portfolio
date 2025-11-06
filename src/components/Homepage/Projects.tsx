@@ -17,7 +17,7 @@ const Projects = () => {
         "Traject is an ed-tech platform I've been building that helps community college students explore transfer pathways, articulation agreements, and career outcomes in one place. It combines scraped and processed course catalogs with external data sources like Lightcast, Adzuna, and BLS to give students insights into majors, GE requirements, and job prospects.",
       tech: "Backend built using AWS (ECS/Fargate, Backblaze B2, Supabase) while the frontend is a Next.js app with a clean, Figma-inspired UI.",
       image: MyTraject,
-      liveUrl: "https://mytraject.com",
+      liveUrl: "https://www.mytraject.com",
       githubUrl: "", // Removed GitHub URL for MyTraject
       technologies: ["Python", "React", "Supabase", "Node", "Java"],
       note: "Note: This project is currently under construction and the repository is private to prevent reverse engineering.", // Added note for MyTraject
