@@ -14,7 +14,7 @@ const Projects = () => {
       description: "Traject is an ed-tech platform I’ve been building that helps community college students explore transfer pathways, articulation agreements, and career outcomes in one place. It combines scraped and processed course catalogs with external data sources like Lightcast, Adzuna, and BLS to give students insights into majors, GE requirements, and job prospects.",
       tech: "Backend built using AWS (ECS/Fargate, Backblaze B2, Supabase) while the frontend is a Next.js app with a clean, Figma-inspired UI.",
       image: FhirConverterIMG,
-      liveUrl: "https://mytraject.com",
+      liveUrl: "https://www.mytraject.com",
       githubUrl: "https://github.com/jushendhillon9/FhirConverterApp",
       technologies: ["Python", "React", "Supabase", "Node", "Java"]
     },
