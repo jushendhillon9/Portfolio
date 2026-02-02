@@ -20,16 +20,18 @@ export default function App() {
       </main>
       
       {/* Footer */}
+            {/* Footer */}
       <footer className="py-8 px-6 border-t border-border bg-muted/10">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-muted-foreground">
             © 2025 Jushen Dhillon. Built with React, TypeScript, and Tailwind CSS.
           </p>
           <p className="text-sm text-muted-foreground mt-2">
-            Designed and developed with ❤️ for showcasing my coding journey.
+            Built to showcase production-grade projects and engineering work.
           </p>
         </div>
       </footer>
+
       
       <Toaster />
     </div>

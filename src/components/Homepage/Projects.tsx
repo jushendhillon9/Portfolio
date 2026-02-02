@@ -12,64 +12,66 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "MyTraject",
+      title: "Traject (Live)",
       description:
-        "Traject is an ed-tech platform I've been building that helps community college students explore transfer pathways, articulation agreements, and career outcomes in one place. It combines scraped and processed course catalogs with external data sources like Lightcast, Adzuna, and BLS to give students insights into majors, GE requirements, and job prospects.",
-      tech: "Backend built using AWS (ECS/Fargate, Backblaze B2, Supabase) while the frontend is a Next.js app with a clean, Figma-inspired UI.",
+        "AI-powered transfer planning platform that translates ASSIST articulation data into dynamic semester plans for community college students.",
+      tech:
+        "Built end-to-end with Next.js + TypeScript, Supabase, AWS Lambda, ChromaDB, and OpenAI embeddings (RAG pipeline).",
       image: MyTraject,
       liveUrl: "https://www.mytraject.com",
-      githubUrl: "", // Removed GitHub URL for MyTraject
-      technologies: ["Python", "React", "Supabase", "Node", "Java"],
-      note: "Note: This project is currently under construction and the repository is private to prevent reverse engineering.", // Added note for MyTraject
+      githubUrl: "",
+      technologies: ["Next.js", "TypeScript", "Supabase", "AWS Lambda", "ChromaDB", "OpenAI", "RAG"],
+      note:
+        "Core engineering highlights: custom data parsing + normalization, serverless APIs, persistent storage/auth, and retrieval-augmented generation for real-time advising. Repository is private; happy to walk through architecture and code samples in an interview.",
     },
     {
       id: 2,
       title: "Akala",
       description:
-        "Modernized AKALA's front end after being selected through the VITERBI Summer Smasher program. Implemented a responsive sidebar, videos page, and profile page optimized for both desktop and mobile UI. Built with a focus on enhancing user experience across platforms, it leverages TypeScript, Tanstack Router, TailwindCSS, and Shadcn components for a sleek, modern frontend. Collaboration and issue tracking were streamlined in a group of 3 using GitHub with Agile and SCRUM methodologies.",
-      tech: "Built using React for modernized front-end, TypeScript, Tanstack Router for page navigation, and Bun for dependency management",
+        "Selected for USC Viterbi Summer Smasher to help modernize Akala’s front-end. Built responsive UI components (sidebar, videos, profile) using React, TypeScript, TanStack Router, Tailwind, and shadcn/ui.",
+      tech: "Frontend modernization with React + TypeScript, TanStack Router, TailwindCSS, shadcn/ui, and Bun.",
       image: Akala,
-      liveUrl: "", // Removed live URL for Akala
-      githubUrl: "", // Removed GitHub URL for Akala
-      technologies: ["React", "TypeScript", "TanstackRouter", "Bun"],
-      note: "Note: As a contributor to this private repository, I do not own the rights to host the web application. If verification of completed issues is necessary, please contact me and I will provide proof.", // Added note for Akala
-      certificateUrl: Certificate, // Added certificate download option for Akala
+      liveUrl: "",
+      githubUrl: "",
+      technologies: ["React", "TypeScript", "TanStack Router", "Tailwind", "shadcn/ui", "Bun"],
+      note: "Private organization repository; certificate available upon request.",
+      certificateUrl: Certificate,
     },
     {
       id: 3,
       title: "FhirConverter App",
       description:
-        "A full-stack FHIR Converter application enabling users to upload and convert files containing multiple FHIR resources to a Google Cloud FHIR dataset. Handles file uploads to and from the Google Cloud Healthcare API for resource management. Includes advanced FHIR search functionalities.",
-      tech: "Built using a Spring Boot Java Back-End and React Front-End",
+        "Full-stack FHIR converter that uploads and converts files containing multiple FHIR resources into a Google Cloud FHIR dataset, with advanced search functionality.",
+      tech: "Spring Boot (Java) backend + React frontend, integrated with Google Cloud Healthcare API and OAuth.",
       image: FhirConverterIMG,
       liveUrl: "https://fhirconverterappfrontend.vercel.app",
       githubUrl: "https://github.com/jushendhillon9/FhirConverterApp",
-      technologies: ["Spring Boot", "React", "Java", "Google Cloud", "FHIR"],
+      technologies: ["Spring Boot", "Java", "React", "Google Cloud", "FHIR", "OAuth"],
     },
     {
       id: 4,
       title: "Just You",
       description:
-        "Meet Just-You: your YouTube companion. Search, save, and annotate videos seamlessly. Tailored for students and creators, it's your one-stop shop for an organized and personalized video experience.",
-      tech: "Built using a MongoDB backend, a GraphQL API, and an Express.js/Node.js server, complemented by a React frontend. User authentication is implemented using JWT.",
+        "YouTube companion for searching, saving, and annotating videos—built for students and creators who want a personalized, organized experience.",
+      tech: "MongoDB + Express/Node backend with GraphQL API, React frontend, and JWT authentication.",
       image:
         "https://images.unsplash.com/photo-1649180543887-158357417159?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3V0dWJlJTIwdmlkZW8lMjBwbGF0Zm9ybXxlbnwxfHx8fDE3NTcwMTY3Njl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       liveUrl: "https://justyou-5edecd479636.herokuapp.com/",
       githubUrl: "https://github.com/jushendhillon9/Just-You",
-      technologies: ["MongoDB", "GraphQL", "Express.js", "React", "JWT"],
+      technologies: ["MongoDB", "GraphQL", "Express", "Node.js", "React", "JWT"],
     },
     {
       id: 5,
       title: "The Crypto-Zone",
       description:
-        "A front-end application to keep tabs on your favorite, promising cryptos by offering real-time crypto tracking, advanced statistics, and insightful news.",
-      tech: "Built using HTML, CSS featuring frameworks, JavaScript with JQuery, Chart.js, and several third-party APIs",
+        "Front-end crypto dashboard for real-time price tracking, stats, and news using third-party APIs.",
+      tech: "HTML/CSS + JavaScript (jQuery), Chart.js, and multiple APIs.",
       image:
         "https://images.unsplash.com/photo-1644925295849-f057b6ee1c66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcnlwdG9jdXJyZW5jeSUyMHRyYWRpbmclMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzU2OTk4ODIwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       liveUrl: "https://jushendhillon9.github.io/Crypto-Zone/",
       githubUrl: "https://github.com/jushendhillon9/Crypto-Zone",
       technologies: ["HTML", "CSS", "JavaScript", "jQuery", "Chart.js", "APIs"],
-      note: "Note: We have limited CoinGecko API queries per minute; if the app loses crypto data during its use, please wait 5 minutes and then reload the application before continuing.",
+      note: "CoinGecko API rate limits may cause temporary missing data—reload after a few minutes if needed.",
     },
   ]
 
@@ -83,8 +85,11 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Projects & Challenges</h2>
-          <div className="w-24 h-1 bg-primary mx-auto"></div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-3 text-primary">Projects</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Selected work focused on full-stack systems, AI tooling, and data-driven products.
+          </p>
+          <div className="w-24 h-1 bg-primary mx-auto mt-6"></div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-8">
@@ -128,7 +133,7 @@ const Projects = () => {
                     ))}
                   </div>
 
-                  <div className="flex gap-3">
+                  <div className="flex flex-wrap gap-3">
                     {project.liveUrl && (
                       <motion.a
                         href={project.liveUrl}
@@ -139,7 +144,7 @@ const Projects = () => {
                         whileTap={{ scale: 0.95 }}
                       >
                         <ExternalLink size={16} />
-                        Live App
+                        {project.title.includes("Traject") ? "View Traject" : "Live App"}
                       </motion.a>
                     )}
 

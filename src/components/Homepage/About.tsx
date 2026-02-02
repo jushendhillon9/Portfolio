@@ -15,7 +15,7 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">About Me</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">About</h2>
           <div className="w-24 h-1 bg-primary mx-auto"></div>
         </motion.div>
 
@@ -28,20 +28,27 @@ const About = () => {
             className="space-y-6"
           >
             <p className="text-lg leading-relaxed text-muted-foreground">
-			Hi, I'm Jushen Dhillon — a Junior at the University of Southern California pursuing a dual major in Computer Science and Business Administration. I’m an aspiring Product Manager with a passion for blending technical expertise and business acumen to build user-centric solutions that create real impact.
-			</p>
+              I’m Jushen Dhillon — a USC student studying Computer Science and Business Administration, and a full-stack engineer
+              focused on building real products that ship.
+            </p>
 
-			<p className="text-lg leading-relaxed text-muted-foreground">
-			Currently, I serve as Technical Lead at <span className="font-semibold">MyTraject</span>, where I’m spearheading the development of an AI-powered resource for community colleges. From managing cross-functional integrations and API negotiations to conducting user outreach and keeping MVP timelines on track, I’m sharpening my skills in agile project management, full-stack development, and strategic decision-making in a lean startup environment.
-			</p>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              Most recently, I built <span className="font-semibold">Traject</span>, an AI-powered transfer planning platform that
+              translates complex ASSIST articulation data into dynamic semester plans for community college students. I
+              architected and deployed the end-to-end system using Next.js, TypeScript, Supabase, AWS Lambda, ChromaDB, and
+              OpenAI embeddings (RAG pipelines).
+            </p>
 
-			<p className="text-lg leading-relaxed text-muted-foreground">
-			Previously, I modernized front-end interfaces at <span className="font-semibold">Akala</span> through the Viterbi Summer Smasher program and built scalable full-stack applications at <span className="font-semibold">Acumen Velocity</span>. These experiences, alongside my academic journey, continue to grow my ability to design responsive web apps, optimize user experiences, and bridge the gap between product vision and technical execution.
-			</p>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              Previously, I worked on front-end modernization at <span className="font-semibold">Akala</span> through USC Viterbi’s
+              Summer Smasher program and built a full-stack healthcare tool at <span className="font-semibold">Acumen Velocity</span>{' '}
+              (Spring Boot + React) integrated with Google Cloud APIs.
+            </p>
 
-			<p className="text-lg leading-relaxed text-muted-foreground">
-			Outside of projects, I’m constantly brainstorming new ideas, considering the audience and potential impact. Through this portfolio, I invite you to explore my work, my interests, and the ways I’m preparing to contribute to innovative tech products and product management roles.
-			</p>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              I’m currently seeking <span className="font-semibold">Software Engineering internships for Summer 2026</span> —
+              especially roles working on backend systems, AI applications, and developer-focused infrastructure.
+            </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
               <motion.a
@@ -56,8 +63,9 @@ const About = () => {
                 LinkedIn
                 <ExternalLink size={16} />
               </motion.a>
+
               <motion.a
-                href= {resume}
+                href={resume}
                 download="JushenDhillon_Resume.pdf"
                 className="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
                 whileHover={{ scale: 1.05 }}
