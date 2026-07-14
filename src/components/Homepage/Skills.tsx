@@ -5,44 +5,43 @@ import { Card, CardContent, CardHeader, CardTitle } from '../ui/card.tsx'
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend Engineering",
+      title: "Machine Learning",
       skills: [
-        "Next.js",
-        "React",
+        "Python",
+        "pandas",
+        "NumPy",
+        "scikit-learn",
+        "TensorFlow",
+        "Keras",
+        "Neural Networks",
+        "Time-Series Modeling"
+      ],
+      color: "bg-purple-50 dark:bg-purple-950/20 border-purple-200 dark:border-purple-800"
+    },
+    {
+      title: "Product Engineering",
+      skills: [
         "TypeScript",
+        "React",
+        "Next.js",
         "Tailwind CSS",
-        "shadcn/ui",
-        "TanStack Router"
+        "Supabase",
+        "PostgreSQL",
+        "APIs"
       ],
       color: "bg-blue-50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-800"
     },
     {
-      title: "Backend & Data Systems",
+      title: "Tools",
       skills: [
-        "Node.js",
-        "Express",
-        "Supabase",
-        "SQL",
-        "MongoDB",
-        "GraphQL",
-        "REST APIs"
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Jupyter",
+        "Vercel",
+        "Bun"
       ],
       color: "bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800"
-    },
-    {
-      title: "AI, Cloud & Infrastructure",
-      skills: [
-        "OpenAI API",
-        "Embeddings",
-        "RAG Pipelines",
-        "ChromaDB",
-        "AWS Lambda",
-        "AWS Fargate",
-        "Docker",
-        "Vercel",
-        "Git"
-      ],
-      color: "bg-purple-50 dark:bg-purple-950/20 border-purple-200 dark:border-purple-800"
     }
   ]
 
@@ -73,7 +72,7 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Technologies I Build With</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Skills &amp; Technologies</h2>
           <div className="w-24 h-1 bg-primary mx-auto"></div>
         </motion.div>
 

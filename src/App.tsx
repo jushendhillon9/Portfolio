@@ -3,6 +3,7 @@ import Hero from './components/Homepage/Hero.tsx'
 import About from './components/Homepage/About.tsx'
 import Projects from './components/Homepage/Projects.tsx'
 import Skills from './components/Homepage/Skills.tsx'
+import Education from './components/Homepage/Education.tsx'
 import Contact from './components/Homepage/Contact.tsx'
 import { Toaster } from './components/ui/sonner.tsx'
 import "./styles/globals.css";
@@ -16,6 +17,7 @@ export default function App() {
         <About />
         <Projects />
         <Skills />
+        <Education />
         <Contact />
       </main>
       

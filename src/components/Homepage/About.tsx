@@ -28,26 +28,28 @@ const About = () => {
             className="space-y-6"
           >
             <p className="text-lg leading-relaxed text-muted-foreground">
-              I’m Jushen Dhillon — a USC student studying Computer Science and Business Administration, and a full-stack engineer
-              focused on building real products that ship.
+              I’m Jushen Dhillon — a student at USC studying Computer Science and Business Administration. My focus is machine
+              learning, AI systems, product engineering, and entrepreneurship, and I enjoy applying what I learn through real
+              projects rather than keeping it limited to coursework.
             </p>
 
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Most recently, I built <span className="font-semibold">Traject</span>, an AI-powered transfer planning platform that
-              translates complex ASSIST articulation data into dynamic semester plans for community college students. I
-              architected and deployed the end-to-end system using Next.js, TypeScript, Supabase, AWS Lambda, ChromaDB, and
-              OpenAI embeddings (RAG pipelines).
+              My coursework has spanned Python, artificial intelligence, and neural networks — including RNNs, LSTMs,
+              autoencoders, GANs, and reinforcement learning. I have completed <span className="font-semibold">TAC 116</span>,{' '}
+              <span className="font-semibold">TAC 216</span>, <span className="font-semibold">CSCI 360</span>, and{' '}
+              <span className="font-semibold">TAC 359</span>, and I plan to take{' '}
+              <span className="font-semibold">TAC 449: Applications of Machine Learning</span> during the upcoming school year.
             </p>
 
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Previously, I worked on front-end modernization at <span className="font-semibold">Akala</span> through USC Viterbi’s
-              Summer Smasher program and built a full-stack healthcare tool at <span className="font-semibold">Acumen Velocity</span>{' '}
-              (Spring Boot + React) integrated with Google Cloud APIs.
+              I’m positioned to receive USC’s Artificial Intelligence Applications Specialization certificate upon graduation,
+              pending formal approval of CSCI 360 as my TAC 259 substitution.
             </p>
 
             <p className="text-lg leading-relaxed text-muted-foreground">
-              I’m currently seeking <span className="font-semibold">Software Engineering internships for Summer 2026</span> —
-              especially roles working on backend systems, AI applications, and developer-focused infrastructure.
+              As Co-Founder of <span className="font-semibold">Traject</span>, I work across product design, frontend, backend,
+              data workflows, and AI integration — and I’m currently building an NBA career modeling project to predict player
+              performance and explore career trajectories.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
