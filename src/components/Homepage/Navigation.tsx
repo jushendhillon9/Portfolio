@@ -39,6 +39,7 @@ const Navigation = () => {
                 { label: 'About', id: 'about' },
                 { label: 'Projects', id: 'projects' },
                 { label: 'Skills', id: 'skills' },
+                { label: 'Education', id: 'education' },
                 { label: 'Contact', id: 'contact' },
               ].map((item) => (
                 <li key={item.id}>

@@ -45,7 +45,7 @@ const Hero = () => {
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-primary via-accent-foreground to-primary bg-clip-text text-transparent">
-            Software Engineer
+            Machine Learning &amp; Product Engineering
           </h1>
 
           <motion.h2
@@ -63,7 +63,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            I build AI-powered products that solve real problems.
+            CS + Business student at USC building intelligent products and applied machine-learning systems.
           </motion.p>
 
           <motion.p
@@ -72,8 +72,9 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.55 }}
           >
-            Creator of <span className="text-primary font-semibold">Traject</span> — an AI transfer-planning platform that translates
-            ASSIST articulation data into dynamic semester plans using Next.js, Supabase, AWS Lambda, and OpenAI.
+            Co-Founder of <span className="text-primary font-semibold">Traject</span>, an AI-powered transfer-planning platform.
+            Currently developing an NBA career modeling project focused on predicting player performance and exploring career
+            trajectories.
           </motion.p>
 
           <motion.div
@@ -86,14 +87,14 @@ const Hero = () => {
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200"
             >
-              View Traject
+              View Projects
             </button>
 
             <a
               href="/Jushen_Dhillon_Resume.pdf"
               className="px-8 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
             >
-              Download Resume
+              View Résumé
             </a>
           </motion.div>
         </motion.div>

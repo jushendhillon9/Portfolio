@@ -11,12 +11,25 @@ import Certificate from "/src/assets/SummerSmasherCertificate-JushenDhillon.png"
 const Projects = () => {
   const projects = [
     {
+      id: 0,
+      title: "NBA Career Modeling Lab",
+      status: "In Progress",
+      description:
+        "A machine-learning project using historical NBA player-season data to predict next-season performance and explore player career trajectories.",
+      tech:
+        "Current work: cleaning and validating historical player-season data, handling traded-player and duplicate-season records, engineering per-game and efficiency features, creating next-season prediction targets, and establishing linear and tree-based baseline models. Planned exploration: RNN/LSTM models for career sequences, autoencoders for player representations and archetypes, Hidden Markov Models for career stages, and model comparison and interpretability.",
+      liveUrl: "",
+      githubUrl: "",
+      technologies: ["Python", "pandas", "NumPy", "scikit-learn", "TensorFlow/Keras", "Matplotlib", "Jupyter"],
+      image: "",
+    },
+    {
       id: 1,
       title: "Traject (Live)",
       description:
-        "AI-powered transfer planning platform that translates ASSIST articulation data into dynamic semester plans for community college students.",
+        "AI-powered transfer-planning platform for California community college students — providing academic pathway and course-planning support with AI-assisted advising.",
       tech:
-        "Built end-to-end with Next.js + TypeScript, Supabase, AWS Lambda, ChromaDB, and OpenAI embeddings (RAG pipeline).",
+        "As Co-Founder, I work across product design, frontend, backend, data workflows, and AI integration. Built end-to-end with Next.js + TypeScript, Supabase, AWS Lambda, ChromaDB, and OpenAI embeddings (RAG pipeline).",
       image: MyTraject,
       liveUrl: "https://www.mytraject.com",
       githubUrl: "",
@@ -87,7 +100,7 @@ const Projects = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-3 text-primary">Projects</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Selected work focused on full-stack systems, AI tooling, and data-driven products.
+            Selected work focused on machine learning, AI-powered products, and full-stack systems.
           </p>
           <div className="w-24 h-1 bg-primary mx-auto mt-6"></div>
         </motion.div>
@@ -103,12 +116,27 @@ const Projects = () => {
             >
               <Card className="overflow-hidden h-full hover:shadow-xl transition-shadow duration-300">
                 <div className="relative overflow-hidden">
-                  <ImageWithFallback
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
-                  />
+                  {project.image ? (
+                    <ImageWithFallback
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+                    />
+                  ) : (
+                    <div
+                      className="w-full h-48 bg-gradient-to-br from-primary/25 via-accent/20 to-primary/10 flex items-center justify-center"
+                      role="img"
+                      aria-label={`${project.title} preview`}
+                    >
+                      <span className="text-primary/60 text-5xl font-bold tracking-tight">JD</span>
+                    </div>
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  {project.status && (
+                    <div className="absolute top-4 right-4">
+                      <Badge className="bg-amber-500 text-white border-transparent shadow-md">{project.status}</Badge>
+                    </div>
+                  )}
                   <div className="absolute bottom-4 left-4">
                     <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
                   </div>
