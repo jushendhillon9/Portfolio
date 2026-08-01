@@ -3,6 +3,7 @@ import Hero from './components/Homepage/Hero.tsx'
 import About from './components/Homepage/About.tsx'
 import Projects from './components/Homepage/Projects.tsx'
 import Skills from './components/Homepage/Skills.tsx'
+import Education from './components/Homepage/Education.tsx'
 import Contact from './components/Homepage/Contact.tsx'
 import { Toaster } from './components/ui/sonner.tsx'
 import "./styles/globals.css";
@@ -16,20 +17,23 @@ export default function App() {
         <About />
         <Projects />
         <Skills />
+        <Education />
         <Contact />
       </main>
       
       {/* Footer */}
+            {/* Footer */}
       <footer className="py-8 px-6 border-t border-border bg-muted/10">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-muted-foreground">
             © 2025 Jushen Dhillon. Built with React, TypeScript, and Tailwind CSS.
           </p>
           <p className="text-sm text-muted-foreground mt-2">
-            Designed and developed with ❤️ for showcasing my coding journey.
+            Built to showcase production-grade projects and engineering work.
           </p>
         </div>
       </footer>
+
       
       <Toaster />
     </div>

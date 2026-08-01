@@ -5,10 +5,15 @@ import { Input } from '../ui/input.tsx'
 import { Textarea } from '../ui/textarea.tsx'
 import { Button } from '../ui/button.tsx'
 import { Label } from '../ui/label.tsx'
-import { ExternalLink, Mail, Phone, Send } from 'lucide-react'
-import { toast } from "sonner";
+import { ExternalLink, Mail, Phone, Send, Copy, Linkedin } from 'lucide-react'
+import { toast } from 'sonner'
 
 const Contact = () => {
+  const email = 'jushen.dhillon@gmail.com'
+  const phone = '(949) 531-8565'
+  const linkedinUrl = 'https://www.linkedin.com/in/jushendhillon/'
+  const blogUrl = 'https://dev.to/jushendhillon9'
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,10 +25,16 @@ const Contact = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
+    setFormData(prev => ({ ...prev, [name]: value }))
+  }
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(email)
+      toast.success('Email copied to clipboard')
+    } catch {
+      toast.error('Could not copy email')
+    }
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -52,7 +63,7 @@ const Contact = () => {
       const data = await resp.json().catch(() => ({}))
       if (!resp.ok) throw new Error(data?.error || 'Failed to send')
 
-      toast.success("Thanks for reaching out! I'll get back to you soon.")
+      toast.success("Thanks — I’ll get back to you soon.")
       setFormData({ name: '', email: '', message: '', company: '' })
     } catch (err: any) {
       toast.error(err?.message || 'Something went wrong')
@@ -71,56 +82,84 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Contact & Blog</h2>
-          <div className="w-24 h-1 bg-primary mx-auto"></div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Contact</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            I’m actively seeking Software Engineering internships for Summer 2026 — especially roles in AI applications,
+            backend systems, and developer infrastructure.
+          </p>
+          <div className="w-24 h-1 bg-primary mx-auto mt-6"></div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Dev.to Blog Section */}
+          {/* Quick Links / Availability */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="flex flex-col items-center justify-center"
+            className="flex flex-col"
           >
-            <Card className="w-full max-w-md hover:shadow-lg transition-shadow duration-300">
-              <CardHeader className="text-center pb-4">
-                <CardTitle className="text-2xl font-bold">Check Out My Blog</CardTitle>
+            <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+              <CardHeader className="pb-4">
+                <CardTitle className="text-2xl font-bold">Let’s connect</CardTitle>
               </CardHeader>
-              <CardContent className="text-center">
-                <motion.a
-                  href="https://dev.to/jushendhillon9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <div className="w-32 h-32 mx-auto mb-6 p-4 bg-black rounded-2xl flex items-center justify-center hover:bg-gray-800 transition-colors duration-200">
-                    <span className="text-white font-bold text-2xl">DEV</span>
-                  </div>
-                </motion.a>
-                <p className="text-muted-foreground mb-6">
-                  Follow my coding journey, tutorials, and insights on dev.to. 
-                  I share my experiences learning new technologies and building projects.
+              <CardContent className="space-y-6">
+                <p className="text-muted-foreground leading-relaxed">
+                  The fastest way to reach me is email or LinkedIn. If you’re hiring for Summer 2026, I’d love to chat.
                 </p>
-                <Button asChild className="w-full">
-                  <a 
-                    href="https://dev.to/jushendhillon9" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2"
-                  >
-                    Visit My Blog
-                    <ExternalLink size={16} />
-                  </a>
-                </Button>
+
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between gap-3 rounded-lg border border-border p-4">
+                    <div className="flex items-center gap-3 text-muted-foreground">
+                      <Mail size={18} />
+                      <span className="font-medium text-foreground">{email}</span>
+                    </div>
+                    <Button variant="secondary" onClick={copyEmail} className="gap-2">
+                      <Copy size={16} />
+                      Copy
+                    </Button>
+                  </div>
+
+                  <div className="flex items-center gap-3 text-muted-foreground rounded-lg border border-border p-4">
+                    <Phone size={18} />
+                    <span className="font-medium text-foreground">{phone}</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Button asChild className="w-full">
+                    <a href={`mailto:${email}`} className="inline-flex items-center gap-2">
+                      Email me
+                      <ExternalLink size={16} />
+                    </a>
+                  </Button>
+
+                  <Button asChild variant="secondary" className="w-full">
+                    <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
+                      <Linkedin size={16} />
+                      LinkedIn
+                      <ExternalLink size={16} />
+                    </a>
+                  </Button>
+                </div>
+
+                {/* Blog (secondary) */}
+                <div className="pt-4 border-t border-border">
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Occasional writing:
+                  </p>
+                  <Button asChild variant="outline" className="w-full">
+                    <a href={blogUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
+                      Read my dev.to posts
+                      <ExternalLink size={16} />
+                    </a>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </motion.div>
 
-          {/* Contact Form Section */}
+          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -129,7 +168,7 @@ const Contact = () => {
           >
             <Card className="h-full">
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-center">Contact Me</CardTitle>
+                <CardTitle className="text-2xl font-bold text-center">Send a message</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -146,14 +185,14 @@ const Contact = () => {
                   />
 
                   <div className="space-y-2">
-                    <Label htmlFor="name">Full Name</Label>
+                    <Label htmlFor="name">Name</Label>
                     <Input
                       id="name"
                       name="name"
                       type="text"
                       value={formData.name}
                       onChange={handleInputChange}
-                      placeholder="Your full name"
+                      placeholder="Your name"
                       required
                     />
                   </div>
@@ -166,7 +205,7 @@ const Contact = () => {
                       type="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="your.email@example.com"
+                      placeholder="you@company.com"
                       required
                     />
                   </div>
@@ -178,37 +217,17 @@ const Contact = () => {
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      placeholder="Tell me about your project or just say hello!"
+                      placeholder="Recruiting, internships, collaborations — what’s up?"
                       rows={5}
                       required
                     />
                   </div>
 
-                  <Button 
-                    type="submit" 
-                    className="w-full"
-                    size="lg"
-                    disabled={submitting}
-                  >
+                  <Button type="submit" className="w-full" size="lg" disabled={submitting}>
                     <Send size={20} className="mr-2" />
                     {submitting ? 'Sending…' : 'Send Message'}
                   </Button>
                 </form>
-
-                {/* Contact Info */}
-                <div className="mt-8 pt-6 border-t border-border">
-                  <h4 className="font-semibold mb-4">Contact Info</h4>
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3 text-muted-foreground">
-                      <Mail size={18} />
-                      <span>jushen.dhillon@gmail.com</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-muted-foreground">
-                      <Phone size={18} />
-                      <span>(949) 531-8565</span>
-                    </div>
-                  </div>
-                </div>
               </CardContent>
             </Card>
           </motion.div>
