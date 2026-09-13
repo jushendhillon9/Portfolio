@@ -84,8 +84,8 @@ const Contact = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">Contact</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            I’m actively seeking Software Engineering internships for Summer 2026 — especially roles in AI applications,
-            backend systems, and developer infrastructure.
+            I’m currently recruiting for full-time New Grad Software Engineering roles starting Fall 2027, with particular
+            interest in backend systems, infrastructure, and technically rigorous product engineering.
           </p>
           <div className="w-24 h-1 bg-primary mx-auto mt-6"></div>
         </motion.div>
@@ -105,7 +105,8 @@ const Contact = () => {
               </CardHeader>
               <CardContent className="space-y-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  The fastest way to reach me is email or LinkedIn. If you’re hiring for Summer 2026, I’d love to chat.
+                  The fastest way to reach me is email or LinkedIn. If you’re hiring for Fall 2027 New Grad Software
+                  Engineering roles, I’d love to chat.
                 </p>
 
                 <div className="space-y-3">

@@ -12,16 +12,17 @@ const Projects = () => {
   const projects = [
     {
       id: 0,
-      title: "NBA Career Modeling Lab",
+      title: "BusinessWise",
       status: "In Progress",
       description:
-        "A machine-learning project using historical NBA player-season data to predict next-season performance and explore player career trajectories.",
+        "Building a company-intelligence pipeline for Atlanta-area businesses as an AI / Software Engineering Consultant — multi-source data ingestion, entity resolution, and enrichment workflows.",
       tech:
-        "Current work: cleaning and validating historical player-season data, handling traded-player and duplicate-season records, engineering per-game and efficiency features, creating next-season prediction targets, and establishing linear and tree-based baseline models. Planned exploration: RNN/LSTM models for career sequences, autoencoders for player representations and archetypes, Hidden Markov Models for career stages, and model comparison and interpretability.",
+        "Core engineering work: multi-source business-data ingestion, entity resolution against a 399K+ record legacy database, async enrichment and job processing, bounded retries with exponential backoff and crash recovery, data normalization, provenance-aware validation, and human-in-the-loop review workflows for company, contact, and location enrichment. Not yet fully production-deployed.",
       liveUrl: "",
       githubUrl: "",
-      technologies: ["Python", "pandas", "NumPy", "scikit-learn", "TensorFlow/Keras", "Matplotlib", "Jupyter"],
+      technologies: ["Python", "Entity Resolution", "Async Job Processing", "PostgreSQL", "Data Validation", "AWS"],
       image: "",
+      note: "Private client engagement; happy to walk through architecture and design decisions in an interview.",
     },
     {
       id: 1,
@@ -29,11 +30,11 @@ const Projects = () => {
       description:
         "AI-powered transfer-planning platform for California community college students — providing academic pathway and course-planning support with AI-assisted advising.",
       tech:
-        "As Co-Founder, I work across product design, frontend, backend, data workflows, and AI integration. Built end-to-end with Next.js + TypeScript, Supabase, AWS Lambda, ChromaDB, and OpenAI embeddings (RAG pipeline).",
+        "As Co-Founder / Founding Engineer, I work across backend, data logic, and AI integration. Built end-to-end with Next.js + TypeScript, PostgreSQL/Supabase, AWS Lambda, ChromaDB, and OpenAI embeddings for retrieval-augmented advising.",
       image: MyTraject,
       liveUrl: "https://www.mytraject.com",
       githubUrl: "",
-      technologies: ["Next.js", "TypeScript", "Supabase", "AWS Lambda", "ChromaDB", "OpenAI", "RAG"],
+      technologies: ["Next.js", "TypeScript", "PostgreSQL", "Supabase", "AWS Lambda", "ChromaDB", "OpenAI"],
       note:
         "Core engineering highlights: custom data parsing + normalization, serverless APIs, persistent storage/auth, and retrieval-augmented generation for real-time advising. Repository is private; happy to walk through architecture and code samples in an interview.",
     },
@@ -52,39 +53,14 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "FhirConverter App",
+      title: "FHIR Converter (Acumen Velocity)",
       description:
-        "Full-stack FHIR converter that uploads and converts files containing multiple FHIR resources into a Google Cloud FHIR dataset, with advanced search functionality.",
+        "Full-stack FHIR converter built for healthcare software at Acumen Velocity — uploads and converts files containing multiple FHIR resources into a Google Cloud FHIR dataset, with advanced search functionality.",
       tech: "Spring Boot (Java) backend + React frontend, integrated with Google Cloud Healthcare API and OAuth.",
       image: FhirConverterIMG,
       liveUrl: "https://fhirconverterappfrontend.vercel.app",
       githubUrl: "https://github.com/jushendhillon9/FhirConverterApp",
       technologies: ["Spring Boot", "Java", "React", "Google Cloud", "FHIR", "OAuth"],
-    },
-    {
-      id: 4,
-      title: "Just You",
-      description:
-        "YouTube companion for searching, saving, and annotating videos—built for students and creators who want a personalized, organized experience.",
-      tech: "MongoDB + Express/Node backend with GraphQL API, React frontend, and JWT authentication.",
-      image:
-        "https://images.unsplash.com/photo-1649180543887-158357417159?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3V0dWJlJTIwdmlkZW8lMjBwbGF0Zm9ybXxlbnwxfHx8fDE3NTcwMTY3Njl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      liveUrl: "https://justyou-5edecd479636.herokuapp.com/",
-      githubUrl: "https://github.com/jushendhillon9/Just-You",
-      technologies: ["MongoDB", "GraphQL", "Express", "Node.js", "React", "JWT"],
-    },
-    {
-      id: 5,
-      title: "The Crypto-Zone",
-      description:
-        "Front-end crypto dashboard for real-time price tracking, stats, and news using third-party APIs.",
-      tech: "HTML/CSS + JavaScript (jQuery), Chart.js, and multiple APIs.",
-      image:
-        "https://images.unsplash.com/photo-1644925295849-f057b6ee1c66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcnlwdG9jdXJyZW5jeSUyMHRyYWRpbmclMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzU2OTk4ODIwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      liveUrl: "https://jushendhillon9.github.io/Crypto-Zone/",
-      githubUrl: "https://github.com/jushendhillon9/Crypto-Zone",
-      technologies: ["HTML", "CSS", "JavaScript", "jQuery", "Chart.js", "APIs"],
-      note: "CoinGecko API rate limits may cause temporary missing data—reload after a few minutes if needed.",
     },
   ]
 
@@ -100,7 +76,7 @@ const Projects = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-3 text-primary">Projects</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Selected work focused on machine learning, AI-powered products, and full-stack systems.
+            Selected work focused on backend systems, data infrastructure, and full-stack engineering.
           </p>
           <div className="w-24 h-1 bg-primary mx-auto mt-6"></div>
         </motion.div>

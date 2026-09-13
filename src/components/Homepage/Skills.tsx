@@ -5,41 +5,64 @@ import { Card, CardContent, CardHeader, CardTitle } from '../ui/card.tsx'
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Machine Learning",
+      title: "Languages",
       skills: [
+        "Java",
         "Python",
-        "pandas",
-        "NumPy",
-        "scikit-learn",
-        "TensorFlow",
-        "Keras",
-        "Neural Networks",
-        "Time-Series Modeling"
+        "C++",
+        "TypeScript",
+        "JavaScript",
+        "SQL"
       ],
       color: "bg-purple-50 dark:bg-purple-950/20 border-purple-200 dark:border-purple-800"
     },
     {
-      title: "Product Engineering",
+      title: "Backend / Data",
       skills: [
-        "TypeScript",
-        "React",
-        "Next.js",
-        "Tailwind CSS",
-        "Supabase",
+        "Node.js",
+        "Spring Boot",
         "PostgreSQL",
-        "APIs"
+        "Supabase",
+        "MongoDB",
+        "REST APIs"
       ],
       color: "bg-blue-50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-800"
     },
     {
-      title: "Tools",
+      title: "Cloud / Infrastructure",
+      skills: [
+        "AWS Lambda",
+        "Google Cloud",
+        "Docker",
+        "Railway"
+      ],
+      color: "bg-amber-50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800"
+    },
+    {
+      title: "AI / ML",
+      skills: [
+        "OpenAI API",
+        "Embeddings",
+        "RAG Pipelines",
+        "ChromaDB"
+      ],
+      color: "bg-pink-50 dark:bg-pink-950/20 border-pink-200 dark:border-pink-800"
+    },
+    {
+      title: "Frontend",
+      skills: [
+        "React",
+        "Next.js",
+        "Tailwind CSS"
+      ],
+      color: "bg-teal-50 dark:bg-teal-950/20 border-teal-200 dark:border-teal-800"
+    },
+    {
+      title: "Testing / Tools",
       skills: [
         "Git",
-        "GitHub",
-        "VS Code",
-        "Jupyter",
-        "Vercel",
-        "Bun"
+        "Jest",
+        "Postman"
       ],
       color: "bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800"
     }

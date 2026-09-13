@@ -45,7 +45,7 @@ const Hero = () => {
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-primary via-accent-foreground to-primary bg-clip-text text-transparent">
-            Machine Learning &amp; Product Engineering
+            Software Engineering | Backend, Systems &amp; AI
           </h1>
 
           <motion.h2
@@ -63,7 +63,8 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            CS + Business student at USC building intelligent products and applied machine-learning systems.
+            USC Computer Science + Business student building production-oriented software, backend systems, and AI-enabled
+            applications.
           </motion.p>
 
           <motion.p
@@ -72,9 +73,9 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.55 }}
           >
-            Co-Founder of <span className="text-primary font-semibold">Traject</span>, an AI-powered transfer-planning platform.
-            Currently developing an NBA career modeling project focused on predicting player performance and exploring career
-            trajectories.
+            Co-Founder / Founding Engineer of <span className="text-primary font-semibold">Traject</span>, an AI-powered
+            transfer-planning platform. Currently an AI / Software Engineering Consultant at{' '}
+            <span className="text-primary font-semibold">BusinessWise</span>, building a company-intelligence pipeline.
           </motion.p>
 
           <motion.div

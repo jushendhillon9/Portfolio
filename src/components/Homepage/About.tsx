@@ -2,7 +2,6 @@ import { motion } from 'motion/react'
 import { ExternalLink, Download, Linkedin } from 'lucide-react'
 import { ImageWithFallback } from '../figma/ImageWithFallback.tsx'
 import professionalPhoto from '/src/assets/ProfessionalPhoto.jpg'
-import resume from '/src/assets/Resume-JushenDhillon.pdf'
 
 const About = () => {
   return (
@@ -28,28 +27,31 @@ const About = () => {
             className="space-y-6"
           >
             <p className="text-lg leading-relaxed text-muted-foreground">
-              I’m Jushen Dhillon — a student at USC studying Computer Science and Business Administration. My focus is machine
-              learning, AI systems, product engineering, and entrepreneurship, and I enjoy applying what I learn through real
-              projects rather than keeping it limited to coursework.
+              I’m Jushen Dhillon — a student at USC studying Computer Science and Business Administration, expecting to
+              graduate in August 2027. My focus is software engineering: backend systems, infrastructure, and AI-enabled
+              applications. I prefer applying what I learn through real engineering work rather than keeping it limited to
+              coursework.
             </p>
 
             <p className="text-lg leading-relaxed text-muted-foreground">
-              My coursework has spanned Python, artificial intelligence, and neural networks — including RNNs, LSTMs,
-              autoencoders, GANs, and reinforcement learning. I have completed <span className="font-semibold">TAC 116</span>,{' '}
-              <span className="font-semibold">TAC 216</span>, <span className="font-semibold">CSCI 360</span>, and{' '}
-              <span className="font-semibold">TAC 359</span>, and I plan to take{' '}
-              <span className="font-semibold">TAC 449: Applications of Machine Learning</span> during the upcoming school year.
+              I currently work as an <span className="font-semibold">AI / Software Engineering Consultant at BusinessWise</span>,
+              where I’m building a company-intelligence pipeline for Atlanta-area businesses — multi-source data ingestion,
+              entity resolution against a 399K+ record legacy database, async enrichment and job processing with bounded
+              retries, exponential backoff, and crash recovery, plus provenance-aware validation and human-in-the-loop review
+              workflows. It hasn’t been fully production-deployed yet, but it’s the core of my day-to-day engineering work.
             </p>
 
             <p className="text-lg leading-relaxed text-muted-foreground">
-              I’m positioned to receive USC’s Artificial Intelligence Applications Specialization certificate upon graduation,
-              pending formal approval of CSCI 360 as my TAC 259 substitution.
+              I’m also <span className="font-semibold">Co-Founder / Founding Engineer of Traject</span>, an AI-powered
+              transfer-planning platform, where I work across backend and data logic, AI-assisted advising and retrieval, and
+              course-planning workflows using Next.js/TypeScript, PostgreSQL/Supabase, and AWS Lambda.
             </p>
 
             <p className="text-lg leading-relaxed text-muted-foreground">
-              As Co-Founder of <span className="font-semibold">Traject</span>, I work across product design, frontend, backend,
-              data workflows, and AI integration — and I’m currently building an NBA career modeling project to predict player
-              performance and explore career trajectories.
+              Previously, I interned at <span className="font-semibold">Akala</span> doing frontend engineering, and worked on
+              healthcare software at <span className="font-semibold">Acumen Velocity</span> building a FHIR converter. My
+              coursework spans data structures, algorithms, software engineering, and applied AI, including{' '}
+              <span className="font-semibold">TAC 459</span>.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
@@ -67,8 +69,8 @@ const About = () => {
               </motion.a>
 
               <motion.a
-                href={resume}
-                download="JushenDhillon_Resume.pdf"
+                href="/Jushen_Dhillon_Resume.pdf"
+                download="Jushen_Dhillon_Resume.pdf"
                 className="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

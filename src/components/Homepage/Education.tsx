@@ -5,11 +5,18 @@ import { Badge } from '../ui/badge.tsx'
 
 const Education = () => {
   const coursework = [
-    { code: 'TAC 116', name: '' },
-    { code: 'TAC 216', name: '' },
-    { code: 'CSCI 360', name: 'Introduction to Artificial Intelligence' },
-    { code: 'TAC 359', name: '' },
-    { code: 'TAC 449', name: 'Applications of Machine Learning (planned)' },
+    { code: 'Data Structures & Object-Oriented Design in C++', name: '' },
+    { code: 'Algorithms', name: '' },
+    { code: 'Software Development in Java', name: '' },
+    { code: 'Software Engineering', name: '' },
+    { code: 'TAC 459', name: 'Natural Language Processing' },
+    { code: 'Applied Neural Networks', name: '' },
+  ]
+
+  const plannedCoursework = [
+    { code: 'Operating Systems', name: '' },
+    { code: 'CSCI 401', name: 'Capstone: Design and Construction of Large Software Systems' },
+    { code: 'Essentials & Digital Frontiers of Big Data', name: '' },
   ]
 
   return (
@@ -48,18 +55,32 @@ const Education = () => {
             </CardHeader>
             <CardContent className="space-y-6">
               <p className="text-muted-foreground leading-relaxed">
-                Positioned to receive USC’s Artificial Intelligence Applications Specialization certificate upon graduation,
-                pending formal approval of CSCI 360 as a TAC 259 substitution.
+                Expected Graduation: <span className="font-semibold">August 2027</span>. Currently focused on software
+                engineering fundamentals — data structures, algorithms, systems, and applied AI.
               </p>
 
               <div>
-                <h3 className="font-semibold mb-3">Relevant AI Coursework</h3>
+                <h3 className="font-semibold mb-3">Relevant Coursework</h3>
                 <ul className="flex flex-wrap gap-3">
                   {coursework.map((course) => (
                     <li key={course.code}>
                       <Badge variant="secondary" className="py-2 px-3 text-sm">
                         <span className="font-semibold">{course.code}</span>
-                        {course.name && <span className="text-muted-foreground">— {course.name}</span>}
+                        {course.name && <span className="text-muted-foreground"> — {course.name}</span>}
+                      </Badge>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="font-semibold mb-3">Planned — Spring 2027</h3>
+                <ul className="flex flex-wrap gap-3">
+                  {plannedCoursework.map((course) => (
+                    <li key={course.code}>
+                      <Badge variant="secondary" className="py-2 px-3 text-sm">
+                        <span className="font-semibold">{course.code}</span>
+                        {course.name && <span className="text-muted-foreground"> — {course.name}</span>}
                       </Badge>
                     </li>
                   ))}
