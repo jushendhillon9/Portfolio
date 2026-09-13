@@ -6,6 +6,7 @@ import { ImageWithFallback } from "../figma/ImageWithFallback.tsx"
 import FhirConverterIMG from "/src/assets/FhirConverter.png"
 import MyTraject from "/src/assets/MyTraject.png"
 import Akala from "/src/assets/Akala.png"
+import BusinessWiseIMG from "/src/assets/BusinessWise.png"
 import Certificate from "/src/assets/SummerSmasherCertificate-JushenDhillon.png"
 
 const Projects = () => {
@@ -21,7 +22,7 @@ const Projects = () => {
       liveUrl: "",
       githubUrl: "",
       technologies: ["Python", "Entity Resolution", "Async Job Processing", "PostgreSQL", "Data Validation", "AWS"],
-      image: "",
+      image: BusinessWiseIMG,
       note: "Private client engagement; happy to walk through architecture and design decisions in an interview.",
     },
     {
