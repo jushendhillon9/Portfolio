@@ -26,7 +26,7 @@ export default function App() {
       <footer className="py-8 px-6 border-t border-border bg-muted/10">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-muted-foreground">
-            © 2025 Jushen Dhillon. Built with React, TypeScript, and Tailwind CSS.
+            © 2026 Jushen Dhillon. Built with React, TypeScript, and Tailwind CSS.
           </p>
           <p className="text-sm text-muted-foreground mt-2">
             Built to showcase production-grade projects and engineering work.
